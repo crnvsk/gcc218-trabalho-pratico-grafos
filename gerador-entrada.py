@@ -1,3 +1,5 @@
+# Programa gerador de entradas para testes.
+
 import random
 
 def generate_random_graph(num_vertices, num_edges):
