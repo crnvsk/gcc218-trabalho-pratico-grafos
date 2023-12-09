@@ -1,4 +1,6 @@
-Possuo um grafo que representa interseções(vértices) e ruas(arestas), nesse grafo preciso saber em quais vértices devo posicionar câmeras **para que elas cubram a maior quantidade possível de ruas por câmera**(ruas adjacentes à esse vértice), **de forma que cubra todas as ruas do grafo**.
+# Prompt
+
+Possuo um grafo que representa inserções(vértices) e ruas(arestas), nesse grafo preciso saber em quais vértices devo posicionar câmeras **para que elas cubram a maior quantidade possível de ruas por câmera**(ruas adjacentes à esse vértice), **de forma que cubra todas as ruas do grafo**.
 Como voce resolveria esse problema usando **Python** e **orientação a objetos**?
 As entradas devem ser **fornecidas pelo usuario** da seguinte forma:
 
