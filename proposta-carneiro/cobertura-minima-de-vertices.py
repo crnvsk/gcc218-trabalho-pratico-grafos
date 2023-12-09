@@ -1,11 +1,12 @@
 class Grafo:
-    def __init__(self, V):
+    def __init__(self, V, inicial=0):
         # Inicializa o grafo com o número de vértices V
         self.V = V
+        self.inicial = inicial
         # Cria um dicionário de adjacência para representar as arestas do grafo
-        self.adj = {v: [] for v in range(V)}
+        self.adj = {v: [] for v in range(inicial, inicial + V)}
         # Cria um dicionário para armazenar o grau de cada vértice
-        self.grau = {v: 0 for v in range(V)}
+        self.grau = {v: 0 for v in range(inicial, inicial + V)}
 
     def adicionar_aresta(self, u, v):
         # Adiciona uma aresta entre os vértices u e v
@@ -46,14 +47,20 @@ if __name__ == "__main__":
     V = int(input("Digite o número de vértices: "))
     E = int(input("Digite o número de arestas: "))
     
-    # Criação do objeto Grafo
-    grafo = Grafo(V)
+    # Solicita ao usuário o número inicial dos vértices
+    inicial = int(input("Digite o número inicial dos vértices: "))
+    
+    # Criação do objeto Grafo com indexação arbitrária
+    grafo = Grafo(V, inicial)
 
     # Adição das arestas ao grafo
-    print("Digite os pares de arestas (u v):")
+    print(f"Digite os pares de arestas (u v) onde {inicial} <= u,v <= {inicial + V - 1}:")
     for _ in range(E):
         u, v = map(int, input().split())
-        grafo.adicionar_aresta(u, v)
+        if inicial <= u <= inicial + V - 1 and inicial <= v <= inicial + V - 1:
+            grafo.adicionar_aresta(u, v)
+        else:
+            print("Entrada inválida. Certifique-se de que está dentro do intervalo especificado.")
 
     # Encontrar a cobertura mínima e imprimir os vértices resultantes
     cobertura = grafo.encontrar_cobertura_minima()
