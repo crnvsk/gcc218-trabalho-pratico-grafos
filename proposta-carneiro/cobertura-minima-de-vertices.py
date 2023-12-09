@@ -1,3 +1,7 @@
+# Implementação utilizando heurística gulosa para encontrar a cobertura mínima de vértices.
+# Problema NP-Completo
+# Complexidade de 
+
 class Grafo:
     def __init__(self, V, inicial=0):
         # Inicializa o grafo com o número de vértices V

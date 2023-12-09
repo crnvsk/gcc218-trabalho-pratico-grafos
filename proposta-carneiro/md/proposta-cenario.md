@@ -16,13 +16,13 @@ A metodologia proposta segue uma estratégia baseada em teoria de grafos, utiliz
 O código em Python foi estruturado através da criação de uma classe denominada "Grafo", que representa o grafo de interseções e ruas. Métodos foram desenvolvidos para adicionar arestas, remover arestas incidentes em um vértice e encontrar a cobertura mínima de vértices.
 
 ## Entradas do Usuário:
-O usuário fornece o número de vértices (interseções) e arestas (ruas) como entrada. Posteriormente, são inseridos os pares de vértices representando a conectividade entre as interseções.
+O usuário fornece o número de vértices (interseções), arestas (ruas) e a numeração do vértice inicial como entrada. Posteriormente, são inseridos os pares de vértices representando a conectividade entre as interseções.
 
 ```
 G = {V, E}
 G = {32, 41}
 
-Número de vértices: 32 
+Número de vértices: 32
 Número de arestas: 41
 
 0 1
