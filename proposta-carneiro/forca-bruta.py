@@ -1,5 +1,6 @@
 # Implementação por força bruta, testando todas as possibilidades, sem a utilização da heurística gulosa para encontrar a cobertura mínima de vértices.
-# Complexidade de 
+# Problema NP-Completo.
+# A solução tem complexidade de O(V!).
 
 class Grafo:
     def __init__(self, V, inicial=0):
