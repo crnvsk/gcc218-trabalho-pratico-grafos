@@ -48,7 +48,7 @@ if __name__ == "__main__":
     E = int(input("Digite o número de arestas: "))
     
     # Solicita ao usuário o número inicial dos vértices
-    inicial = int(input("Digite o número inicial dos vértices: "))
+    inicial = int(input("Digite o número do vértice inicial: "))
     
     # Criação do objeto Grafo com indexação arbitrária
     grafo = Grafo(V, inicial)
