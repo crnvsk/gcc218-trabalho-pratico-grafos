@@ -1,3 +1,4 @@
+# Implementação feita por: Augusto Mariano, João Pedro Alves Carneiro, Lucas Silva Meira, Otavio Rodrigues De Faria
 # Implementação utilizando heurística gulosa para encontrar a cobertura mínima de vértices.
 # Problema NP-Completo.
 # A solução tem complexidade de O(V^2).

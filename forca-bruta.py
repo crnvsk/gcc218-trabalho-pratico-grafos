@@ -1,4 +1,4 @@
-#Implementação feita por: Augusto Mariano, João Pedro Alves Carneiro, Lucas Silva Meira, Otavio Rodrigues DE Faria
+# Implementação feita por: Augusto Mariano, João Pedro Alves Carneiro, Lucas Silva Meira, Otavio Rodrigues De Faria
 # Implementação por força bruta, testando todas as possibilidades, sem a utilização da heurística gulosa para encontrar a cobertura mínima de vértices.
 # Problema NP-Completo.
 # A solução tem complexidade de O(V!).
