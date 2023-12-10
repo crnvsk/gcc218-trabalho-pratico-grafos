@@ -4,7 +4,7 @@
 
 class Grafo:
     def __init__(self, V, inicial=0):
-        # Inicializa o grafo com o número de vértices V
+        # Inicializa o grafo com um número de vértices V
         self.V = V
         self.inicial = inicial
         # Cria um dicionário de adjacência para representar as arestas do grafo
@@ -33,7 +33,7 @@ class Grafo:
         vertices_ordenados = sorted(self.grau, key=lambda x: self.grau[x], reverse=True)
         cobertura = []
 
-        # Enquanto ainda houver arestas no grafo
+        # Enquanto ainda houverem arestas no grafo
         while any(self.adj.values()):
             # Escolhe o vértice de maior grau
             vertice = vertices_ordenados[0]
@@ -69,3 +69,4 @@ if __name__ == "__main__":
     # Encontrar a cobertura mínima e imprimir os vértices resultantes
     cobertura = grafo.encontrar_cobertura_minima()
     print("Vertices para cobertura mínima:", cobertura)
+
