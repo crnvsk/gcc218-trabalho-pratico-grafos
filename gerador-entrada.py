@@ -27,8 +27,6 @@ def main():
     random_graph = generate_random_graph(num_vertices, num_edges)
 
     # Exibe informações sobre o grafo gerado
-    print("Arestas:")
-
     for vertex, edges in random_graph.items():
         for target in edges:
             print(f"{vertex} {target}")

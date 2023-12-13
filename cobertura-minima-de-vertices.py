@@ -1,7 +1,5 @@
-# Implementação feita por: Augusto Mariano, João Pedro Alves Carneiro, Lucas Silva Meira, Otavio Rodrigues De Faria
 # Implementação utilizando heurística gulosa para encontrar a cobertura mínima de vértices.
 # Problema NP-Completo.
-# A solução tem complexidade de O(V^2).
 
 class Grafo:
     def __init__(self, V, inicial=0):
@@ -48,26 +46,19 @@ class Grafo:
 
 
 if __name__ == "__main__":
-    # Solicita ao usuário o número de vértices e arestas
-    V = int(input("Digite o número de vértices: "))
-    E = int(input("Digite o número de arestas: "))
-    
-    # Solicita ao usuário o número inicial dos vértices
-    inicial = int(input("Digite o número do vértice inicial: "))
-    
-    # Criação do objeto Grafo com indexação arbitrária
-    grafo = Grafo(V, inicial)
+    # Lê as entradas do arquivo input.txt
+    with open("input.txt", "r") as file:
+        # Divide a linha em partes e extrai os valores individuais
+        V, E, inicial = map(int, file.readline().strip().split())
 
-    # Adição das arestas ao grafo
-    print(f"Digite os pares de arestas (u v) onde {inicial} <= u,v <= {inicial + V - 1}:")
-    for _ in range(E):
-        u, v = map(int, input().split())
-        if inicial <= u <= inicial + V - 1 and inicial <= v <= inicial + V - 1:
-            grafo.adicionar_aresta(u, v)
-        else:
-            print("Entrada inválida. Certifique-se de que está dentro do intervalo especificado.")
+        grafo = Grafo(V, inicial)
+        for _ in range(E):
+            u, v = map(int, file.readline().strip().split())
+            if inicial <= u <= inicial + V - 1 and inicial <= v <= inicial + V - 1:
+                grafo.adicionar_aresta(u, v)
+            else:
+                print("Entrada inválida. Certifique-se de que está dentro do intervalo especificado.")
 
-    # Encontrar a cobertura mínima e imprimir os vértices resultantes
-    cobertura = grafo.encontrar_cobertura_minima()
-    print("Vertices para cobertura mínima:", cobertura)
+        cobertura = grafo.encontrar_cobertura_minima()
+        print("Vertices para cobertura mínima:", cobertura)
 

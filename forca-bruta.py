@@ -1,7 +1,5 @@
-# Implementação feita por: Augusto Mariano, João Pedro Alves Carneiro, Lucas Silva Meira, Otavio Rodrigues De Faria
 # Implementação por força bruta, testando todas as possibilidades, sem a utilização da heurística gulosa para encontrar a cobertura mínima de vértices.
 # Problema NP-Completo.
-# A solução tem complexidade de O(V!).
 
 class Grafo:
     def __init__(self, V, inicial=0):
@@ -76,22 +74,18 @@ class Grafo:
 
 
 if __name__ == "__main__":
-    # Solicita entrada do usuário para o número de vértices, arestas e vértice inicial.
-    V = int(input("Digite o número de vértices: "))
-    E = int(input("Digite o número de arestas: "))
-    inicial = int(input("Digite o número do vértice inicial: "))
-    
-    # Cria um objeto Grafo e solicita ao usuário que insira os pares de arestas.
-    grafo = Grafo(V, inicial)
-    print(f"Digite os pares de arestas (u v) onde {inicial} <= u,v <= {inicial + V - 1}:")
-    for _ in range(E):
-        u, v = map(int, input().split())
-        if inicial <= u <= inicial + V - 1 and inicial <= v <= inicial + V - 1:
-            grafo.adicionar_aresta(u, v)
-        else:
-            print("Entrada inválida. Certifique-se de que está dentro do intervalo especificado.")
+    # Lê as entradas do arquivo input.txt
+    with open("input.txt", "r") as file:
+        # Divide a linha em partes e extrai os valores individuais
+        V, E, inicial = map(int, file.readline().strip().split())
 
-    # Encontra e exibe a cobertura mínima de vértices.
-    cobertura = grafo.encontrar_cobertura_minima_bruta()
-    print("Vertices para cobertura mínima:", cobertura)
+        grafo = Grafo(V, inicial)
+        for _ in range(E):
+            u, v = map(int, file.readline().strip().split())
+            if inicial <= u <= inicial + V - 1 and inicial <= v <= inicial + V - 1:
+                grafo.adicionar_aresta(u, v)
+            else:
+                print("Entrada inválida. Certifique-se de que está dentro do intervalo especificado.")
 
+        cobertura = grafo.encontrar_cobertura_minima_bruta()
+        print("Vertices para cobertura mínima:", cobertura)

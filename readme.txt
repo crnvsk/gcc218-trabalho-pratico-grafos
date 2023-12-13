@@ -1,6 +1,7 @@
 # GCC218 - Algoritmos em Grafos - Trabalho Prático
 
 ## Discentes:
+
 - João Pedro Alves Carneiro Valadão
 - Augusto Inácio Silva Mariano
 - Otávio Rodrigues de Faria
@@ -32,51 +33,14 @@ O usuário fornece as seguintes informações como entrada no arquivo input.txt:
 Exemplo de arquivo input.txt:
 
 G = {V, E}
-G = {32, 41}
+G = {4, 4}
 
 ```
-32 41 0
-0 1
-0 2
-1 3
-1 7
-2 29
-2 28
+4 4 1
+1 2
+2 3
+2 4
 3 4
-3 5
-5 6
-7 8
-8 9
-8 10
-9 14
-10 11
-10 12
-11 12
-12 13
-13 14
-13 15
-14 17
-15 16
-16 18
-17 18
-17 31
-18 19
-19 20
-19 30
-20 21
-20 22
-22 23
-22 24
-23 25
-24 25
-24 26
-26 27
-27 28
-27 30
-28 31
-29 26
-30 31
-31 30
 ```
 
 ## Resultados:
