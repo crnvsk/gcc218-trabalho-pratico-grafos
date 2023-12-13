@@ -1,6 +1,7 @@
 # GCC218 - Algoritmos em Grafos - Trabalho Prático
 
 ## Discentes:
+
 - João Pedro Alves Carneiro Valadão
 - Augusto Inácio Silva Mariano
 - Otávio Rodrigues de Faria
@@ -21,8 +22,11 @@ A metodologia proposta segue uma estratégia baseada em teoria de grafos, utiliz
 ## Implementação em Python:
 O código em Python foi estruturado através da criação de uma classe denominada "Grafo", que representa o grafo de interseções e ruas. Métodos foram desenvolvidos para adicionar arestas, remover arestas incidentes em um vértice e encontrar a cobertura mínima de vértices.
 
-## Entradas do Usuário:
-O usuário fornece as seguintes informações como entrada no arquivo input.txt:
+## Rodando o Programa
+Para rodar o programa no terminal utilize: python nome_do_programa.py nome_do_arquivo.txt
+
+## Entradas do Arquivo:
+O arquivo.txt deve fornecer as seguintes informações como entrada:
 
 - O número de vértices (interseções).
 - O número de arestas (ruas).
@@ -32,51 +36,14 @@ O usuário fornece as seguintes informações como entrada no arquivo input.txt:
 Exemplo de arquivo input.txt:
 
 G = {V, E}
-G = {32, 41}
+G = {4, 4}
 
 ```
-32 41 0
-0 1
-0 2
-1 3
-1 7
-2 29
-2 28
+4 4 1
+1 2
+2 3
+2 4
 3 4
-3 5
-5 6
-7 8
-8 9
-8 10
-9 14
-10 11
-10 12
-11 12
-12 13
-13 14
-13 15
-14 17
-15 16
-16 18
-17 18
-17 31
-18 19
-19 20
-19 30
-20 21
-20 22
-22 23
-22 24
-23 25
-24 25
-24 26
-26 27
-27 28
-27 30
-28 31
-29 26
-30 31
-31 30
 ```
 
 ## Resultados:
@@ -84,4 +51,3 @@ A solução do problema fornece os vértices ideais para posicionar câmeras, ma
 
 ## Conclusão:
 O trabalho proposto oferece uma abordagem eficaz e escalável para o problema de cobertura de vértices em grafos, com aplicação prática na otimização da vigilância em interseções e ruas. A implementação em Python e a estrutura orientada a objetos proporcionam uma solução flexível e de fácil compreensão.
-
