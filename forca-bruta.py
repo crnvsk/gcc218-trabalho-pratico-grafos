@@ -1,5 +1,4 @@
-# Implementação por força bruta, testando todas as possibilidades, sem a utilização da heurística gulosa para encontrar a cobertura mínima de vértices.
-# Problema NP-Completo.
+import sys
 
 class Grafo:
     def __init__(self, V, inicial=0):
@@ -74,18 +73,24 @@ class Grafo:
 
 
 if __name__ == "__main__":
-    # Lê as entradas do arquivo input.txt
-    with open("input.txt", "r") as file:
-        # Divide a linha em partes e extrai os valores individuais
+    # Verifica se o nome do arquivo foi fornecido como argumento de linha de comando
+    if len(sys.argv) != 2:
+        print("insira no terminal: python nome_do_programa.py nome_do_arquivo.txt")
+        sys.exit(1)
+
+    nome_arquivo = sys.argv[1]
+
+    # Lê as entradas do arquivo especificado na linha de comando
+    with open(nome_arquivo, "r") as file:
         V, E, inicial = map(int, file.readline().strip().split())
 
         grafo = Grafo(V, inicial)
-        for _ in range(E):
+        for i in range(1, E + 1):
             u, v = map(int, file.readline().strip().split())
             if inicial <= u <= inicial + V - 1 and inicial <= v <= inicial + V - 1:
                 grafo.adicionar_aresta(u, v)
             else:
-                print("Entrada inválida. Certifique-se de que está dentro do intervalo especificado.")
+                print(f"Entrada inválida para a aresta {i}. Certifique-se de que está dentro do intervalo especificado.")
 
         cobertura = grafo.encontrar_cobertura_minima_bruta()
-        print("Vertices para cobertura mínima:", cobertura)
+        print("Vértices para cobertura mínima:", cobertura)

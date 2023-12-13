@@ -47,7 +47,7 @@ class Grafo:
 if __name__ == "__main__":
     # Verifica se o nome do arquivo foi fornecido como argumento de linha de comando
     if len(sys.argv) != 2:
-        print("insira no terminal:python nome_do_programa.py nome_do_arquivo.txt")
+        print("insira no terminal: python nome_do_programa.py nome_do_arquivo.txt")
         sys.exit(1)
 
     nome_arquivo = sys.argv[1]

@@ -25,7 +25,7 @@ O código em Python foi estruturado através da criação de uma classe denomina
 ## Rodando o Programa
 Para rodar o programa no terminal utilize: python nome_do_programa.py nome_do_arquivo.txt
 
-## Entradas do Usuário:
+## Entradas do Arquivo:
 O arquivo.txt deve fornecer as seguintes informações como entrada:
 
 - O número de vértices (interseções).
