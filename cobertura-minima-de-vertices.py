@@ -1,5 +1,4 @@
-# Implementação utilizando heurística gulosa para encontrar a cobertura mínima de vértices.
-# Problema NP-Completo.
+import sys
 
 class Grafo:
     def __init__(self, V, inicial=0):
@@ -46,9 +45,15 @@ class Grafo:
 
 
 if __name__ == "__main__":
-    # Lê as entradas do arquivo input.txt
-    with open("input.txt", "r") as file:
-        # Divide a linha em partes e extrai os valores individuais
+    # Verifica se o nome do arquivo foi fornecido como argumento de linha de comando
+    if len(sys.argv) != 2:
+        print("insira no terminal:python nome_do_programa.py nome_do_arquivo.txt")
+        sys.exit(1)
+
+    nome_arquivo = sys.argv[1]
+
+    # Lê as entradas do arquivo especificado na linha de comando
+    with open(nome_arquivo, "r") as file:
         V, E, inicial = map(int, file.readline().strip().split())
 
         grafo = Grafo(V, inicial)
@@ -61,4 +66,3 @@ if __name__ == "__main__":
 
         cobertura = grafo.encontrar_cobertura_minima()
         print("Vertices para cobertura mínima:", cobertura)
-

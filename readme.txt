@@ -22,8 +22,11 @@ A metodologia proposta segue uma estratégia baseada em teoria de grafos, utiliz
 ## Implementação em Python:
 O código em Python foi estruturado através da criação de uma classe denominada "Grafo", que representa o grafo de interseções e ruas. Métodos foram desenvolvidos para adicionar arestas, remover arestas incidentes em um vértice e encontrar a cobertura mínima de vértices.
 
+## Rodando o Programa
+Para rodar o programa no terminal utilize: python nome_do_programa.py nome_do_arquivo.txt
+
 ## Entradas do Usuário:
-O usuário fornece as seguintes informações como entrada no arquivo input.txt:
+O arquivo.txt deve fornecer as seguintes informações como entrada:
 
 - O número de vértices (interseções).
 - O número de arestas (ruas).
@@ -48,4 +51,3 @@ A solução do problema fornece os vértices ideais para posicionar câmeras, ma
 
 ## Conclusão:
 O trabalho proposto oferece uma abordagem eficaz e escalável para o problema de cobertura de vértices em grafos, com aplicação prática na otimização da vigilância em interseções e ruas. A implementação em Python e a estrutura orientada a objetos proporcionam uma solução flexível e de fácil compreensão.
-
